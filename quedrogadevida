@@ -1,0 +1,28 @@
+function solucao(ano) {
+	//seu codigo aqui
+    if (ano >= -4000 && ano <= 476){
+        console.log('ANTIGA');
+    } else if (ano >= 477 && ano <= 1453) {
+        console.log('MEDIA');
+    } else if (ano >= 1454 && ano <= 1789) {
+        console.log('MODERNA');
+    } else {
+        console.log('CONTEMPORANEA');
+    }
+}
+
+function processData(input) {
+	const ano = Number(input);
+    solucao(ano);
+} 
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+    _input += input;
+});
+
+process.stdin.on("end", function () {
+   processData(_input);
+});
